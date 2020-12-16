@@ -1,0 +1,31 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+Options -Indexes
+
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403/index.html
+
+RewriteCond %{HTTP_HOST} ^mytalentine.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^talentine.dk$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^talentine.org$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^talentine.net$ [NC]
+RewriteRule (.*) https://talentine.io/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} events.mytalentine.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} event.mytalentine.com$ [NC]
+RewriteRule ^(.*)$ https://talentine.io/events/ausbildungs-messe/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} stud.mytalentine.com$ [NC]
+RewriteRule ^(.*)$ https://talentine.io/events/hochschul-messe/$1 [R=301,L]
+
+Redirect 301 /events/HochschulmesseRheinland https://talentine.io/hochschultalente-rheinland
+Redirect 301 /events/TKMC_SKILL_UP https://talentine.io/events/tkmc-skill-up
+
+# Redirect next to event
+Redirect 301 /events/muehlacker/next https://talentine.io/events/muehlacker
+Redirect 301 /events/muehlacker/next/ https://talentine.io/events/muehlacker

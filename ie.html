@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>veralteter Browser</title>
+    <style>
+      /* Paragraphs */
+      @font-face {
+        font-display: swap;
+        font-family: 'Manrope';
+        src: url('/fonts/manrope-medium.woff2');
+        font-style: normal;
+        font-weight: normal;
+      }
+
+      /* Subheadlines, infobox */
+      @font-face {
+        font-display: swap;
+        font-family: 'Manrope';
+        src: url('/fonts/manrope-bold.woff2');
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      /* Headlines, <strong> */
+      @font-face {
+        font-display: swap;
+        font-family: 'Manrope';
+        src: url('/fonts/manrope-extrabold.woff2');
+        font-style: normal;
+        font-weight: bold;
+      }
+
+      html,
+      body {
+        font-family: Manrope, Arial;
+        font-size: 16px;
+        line-height: 1.2;
+        height: 100%;
+        background: rgb(23, 21, 34);
+        color: rgb(255, 255, 255);
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      .content {
+      }
+      h1 {
+        text-align: center;
+        color: rgb(255, 0, 150);
+      }
+      .logo {
+        margin: 0 auto;
+        display: block;
+      }
+      .footer {
+        position: fixed;
+        bottom: 2rem;
+        left: 2rem;
+      }
+      a {
+        color: rgb(32, 210, 244);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <img
+          src="/images/talentine-logo.png"
+          alt="Talentine - logo"
+          class="logo"
+        />
+        <h1>veralteter Browser erkannt</h1>
+        <p>
+          Um unseren Service nutzen zu können, setzen wir einen aktuellen
+          Browser wie
+          <a href="https://www.microsoft.com/de-de/edge">Microsoft Edge</a>,
+          <a href="https://www.google.com/chrome/">Google Chrome</a>, oder
+          <a href="https://www.mozilla.org/de/firefox/new/">Mozilla Firefox</a>
+          vorraus.
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="https://mytalentine.com/impressum/">Impressum</a>
+    </div>
+  </body>
+</html>

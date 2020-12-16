@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1608117749",layout:"event",error:a,state:a,serverRendered:false,routePath:"\u002Fevents\u002Ftkmc-skill-up\u002Farbeitgeber",config:{assetsUrl:"https:\u002F\u002Fapi.talentine.io\u002Fimages",content:{dbHash:"d0e58810"}}}}(null));
